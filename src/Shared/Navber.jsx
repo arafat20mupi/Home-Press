@@ -18,7 +18,9 @@ const Navber = () => {
     const Navlinks =<>
         <li><NavLink to={'/'}>Home</NavLink> </li>
         <li><NavLink to={'/userProfile'}>UserProfile</NavLink> </li>
-        <li><NavLink to={'/updateProfile'}>UpdateProfile</NavLink> </li>
+        {
+            user && <li><NavLink to={'/updateProfile'}>UpdateProfile</NavLink> </li>
+        }
         <li><NavLink to={'/about'}>About</NavLink> </li>
     </>
     return (
