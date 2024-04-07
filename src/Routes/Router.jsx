@@ -4,6 +4,8 @@ import Home from "../Pages/Home";
 import UserProfile from "../Pages/UserProfile";
 import UpdateProfile from "../Pages/UpdateProfile";
 import About from "../Pages/About";
+import Login from "../Layouts/Login";
+import Register from "../Layouts/Register";
 
 const router = createBrowserRouter([
     {
@@ -26,6 +28,14 @@ const router = createBrowserRouter([
                 path:'/about',
                 element:<About></About>
             },
+            {
+                path:'/login',
+                element:<Login></Login>
+            },
+            {
+                path:'/register',
+                element:<Register></Register>
+            }
         ]
     }
 ])
