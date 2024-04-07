@@ -1,0 +1,146 @@
+[
+    {
+        "id": 1,
+        "estate_title": "Cozy Apartment in Downtown",
+        "segment_name": "Residential",
+        "description": "A modern and cozy apartment located in the heart of downtown. Close to amenities and public transportation.",
+        "price": "$200,000",
+        "status": "sale",
+        "area": "1000 sq ft",
+        "location": "Downtown, CityName",
+        "facilities": [
+            "living room",
+            "kitchen",
+            "balcony"
+        ],
+        "image": " https://i.ibb.co/g4BDvpk/apartments-s9-740x884.jpg"
+    },
+    {
+        "id": 2,
+        "estate_title": "Spacious Family Home",
+        "segment_name": "Residential",
+        "description": "A spacious single-family home perfect for families. Features a large backyard and close proximity to schools.",
+        "price": "$350,000",
+        "status": "sale",
+        "area": "2500 sq ft",
+        "location": "Suburb, CityName",
+        "facilities": [
+            "living room",
+            "kitchen",
+            "backyard"
+        ],
+        "image": "https://i.ibb.co/LJN2F56/apartments-s1-740x884.jpg"
+    },
+    {
+        "id": 3,
+        "estate_title": "Luxury Condo with Ocean View",
+        "segment_name": "Residential",
+        "description": "Experience luxury living with breathtaking ocean views from this high-rise condo. Features top-of-the-line amenities.",
+        "price": "$500,000",
+        "status": "sale",
+        "area": "1500 sq ft",
+        "location": "Beachfront, CityName",
+        "facilities": [
+            "living room",
+            "swimming pool",
+            "gym"
+        ],
+        "image": "https://i.ibb.co/m5y33vj/apartments-s2-740x884.jpg"
+    },
+    {
+        "id": 4,
+        "estate_title": "Modern Townhouse in Gated Community",
+        "segment_name": "Residential",
+        "description": "A modern townhouse situated in a secure gated community. Perfect for those seeking privacy and convenience.",
+        "price": "$280,000",
+        "status": "sale",
+        "area": "1800 sq ft",
+        "location": "Gated Community, CityName",
+        "facilities": [
+            "living room",
+            "kitchen",
+            "garden"
+        ],
+        "image": "https://i.ibb.co/thsdYPR/apartments-s3-740x884.jpg"
+    },
+    {
+        "id": 5,
+        "estate_title": "Charming Cottage by the Lake",
+        "segment_name": "Residential",
+        "description": "Escape to this charming cottage nestled by the lake. Ideal for a weekend getaway or permanent residence.",
+        "price": "$150,000",
+        "status": "sale",
+        "area": "1200 sq ft",
+        "location": "Lakefront, CityName",
+        "facilities": [
+            "living room",
+            "fireplace",
+            "deck"
+        ],
+        "image": "https://i.ibb.co/r5KwdkP/apartments-s4-740x884.jpg"
+    },
+    {
+        "id": 6,
+        "estate_title": "Modern Apartment with City Views",
+        "segment_name": "Residential",
+        "description": "Enjoy stunning city views from this modern apartment. Conveniently located near shopping and dining.",
+        "price": "$280,000",
+        "status": "sale",
+        "area": "1100 sq ft",
+        "location": "City Center, CityName",
+        "facilities": [
+            "living room",
+            "gym",
+            "parking"
+        ],
+        "image": " https://i.ibb.co/kMTjdjd/apartments-s6-740x884.jpg"
+    },
+    {
+        "id": 7,
+        "estate_title": "Family-Friendly Suburban Home",
+        "segment_name": "Residential",
+        "description": "This spacious suburban home is perfect for families. Close to schools and parks, with a large backyard.",
+        "price": "$320,000",
+        "status": "sale",
+        "area": "2000 sq ft",
+        "location": "Suburb, CityName",
+        "facilities": [
+            "living room",
+            "kitchen",
+            "backyard"
+        ],
+        "image": "https://i.ibb.co/4gdptzw/apartments-s5-740x884.jpg"
+    },
+    {
+        "id": 8,
+        "estate_title": "Elegant Townhouse with Courtyard",
+        "segment_name": "Residential",
+        "description": "Step into elegance with this townhouse featuring a beautiful courtyard. Ideal for entertaining guests.",
+        "price": "$400,000",
+        "status": "sale",
+        "area": "2200 sq ft",
+        "location": "Historic District, CityName",
+        "facilities": [
+            "living room",
+            "kitchen",
+            "courtyard"
+        ],
+        "image": "https://i.ibb.co/9vrvrHB/apartments-s7-740x884.jpg"
+    },
+    {
+        "id": 9,
+        "estate_title": "Luxurious Penthouse with Panoramic Views",
+        "segment_name": "Residential",
+        "description": "Indulge in luxury with this penthouse offering panoramic city views. Features high-end finishes and amenities.",
+        "price": "$1,000,000",
+        "status": "sale",
+        "area": "3000 sq ft",
+        "location": "City Center, CityName",
+        "facilities": [
+            "living room",
+            "swimming pool",
+            "gym"
+        ],
+        "image": " https://i.ibb.co/9cm43bG/apartments-s8-740x884.jpg"
+    }
+]
