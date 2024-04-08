@@ -1,6 +1,7 @@
 /* eslint-disable no-undef */
 /* eslint-disable react/prop-types */
-import { getAuth, createUserWithEmailAndPassword, GoogleAuthProvider, TwitterAuthProvider, FacebookAuthProvider, GithubAuthProvider, onAuthStateChanged, signInWithPopup, signOut, signInWithEmailAndPassword } from "firebase/auth";
+
+import { getAuth, createUserWithEmailAndPassword, GoogleAuthProvider,  GithubAuthProvider, onAuthStateChanged, signInWithPopup, signOut, signInWithEmailAndPassword } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import app from "../Firebase/firebase";
 const auth = getAuth(app);
@@ -31,17 +32,6 @@ const AuthProvider = ({ children }) => {
         setLoading(true)
         return signInWithPopup(auth, GoogleProvider)
     }
-    const twitterProvider = new TwitterAuthProvider();
-    const createTwitterUser = () => {
-        setLoading(true)
-        return signInWithPopup(auth, twitterProvider)
-    }
-
-    const facebookProvider = new FacebookAuthProvider();
-    const createFacebookUser = () => {
-        setLoading(true)
-        return signInWithPopup(auth, facebookProvider)
-    }
 
     const githubProvider = new GithubAuthProvider();
     const createGithubUser = () => {
@@ -66,8 +56,6 @@ const AuthProvider = ({ children }) => {
         signOutUser,
         signInUser,
         loading,
-        createTwitterUser,
-        createFacebookUser,
         createGithubUser,
         createGoogleUser
     }

@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import UserProfile from "../Pages/UserProfile";
+import { FcHome } from "react-icons/fc";
 
 const Navber = () => {
     const { user, signOutUser } = useContext(AuthContext)
@@ -36,7 +37,11 @@ const Navber = () => {
                         }
                     </ul>
                 </div>
-                <a className="btn btn-ghost font-bold text-2xl">Urban</a>
+                <div className="flex justify-center items-center">
+                    <FcHome className="text-4xl"/>
+                    <a className="btn btn-ghost font-bold text-2xl">Urban</a>
+                </div>
+
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu text-lg space-x-2 menu-horizontal px-1">

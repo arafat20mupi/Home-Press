@@ -2,7 +2,8 @@ import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import { useLocation, useNavigate } from "react-router-dom";
-
+import { GoArrowRight } from "react-icons/go";
+import { toast } from 'react-toastify';
 const Register = () => {
     const { createUser, } = useContext(AuthContext)
     const [error, setError] = useState('')
@@ -17,14 +18,43 @@ const Register = () => {
         const photo = from.get('photo')
         const password = from.get('password')
         console.log(name, email, photo, password);
+        if (password.length < 6) {
+            toast.error("Password must be at least 6 characters", {
+                position: "top-center",
+                autoClose: 1000
+            });
+            return
+        }
+        if (!/[A-Z]/.test(password)) {
+            toast.error("Must have an Uppercase letter ", {
+                position: "top-center",
+                autoClose: 1000
+            });
+            return
+        }
+        if (!/[a-z]/.test(password)) {
+            toast.error("Must have an Lowercase letter ", {
+                position: "top-center",
+                autoClose: 1000
+            });
+            return
+        }
         createUser(email, password)
             .then(result => {
+                toast.success("Register Succesfully", {
+                    position: "top-center",
+                    autoClose: 1000
+                });
                 console.log(result.user)
                 navigate("/")
+
             })
             .catch(error => {
                 console.log(error);
-                setError(error.message.split("/")[1]);
+                toast.error("Already Register This Account", {
+                    position: "top-center",
+                    autoClose: 1000
+                });
             }
             )
     }
@@ -55,12 +85,14 @@ const Register = () => {
                     }
                     <button type="submit" className="block w-full p-3 text-center rounded-sm dark:text-gray-50 dark:bg-violet-600">Register</button>
                 </form>
-                <p className="text-xs text-center sm:px-6 dark:text-gray-600">Already have an account?
+                <p className="text-lg flex text-center sm:px-6 dark:text-gray-600">Already have an account?
                     <Link to="/login">
-                        <button className="ml-3 font-bold text-blue-600">Login</button>
+                        <button className="ml-4  font-bold  text-blue-600 items-center justify-center
+                         flex">Login <GoArrowRight />  </button>
                     </Link>
                 </p>
             </div>
+
         </div>
     );
 };
