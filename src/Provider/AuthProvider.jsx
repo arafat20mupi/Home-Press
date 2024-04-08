@@ -28,20 +28,24 @@ const AuthProvider = ({ children }) => {
 
     const GoogleProvider = new GoogleAuthProvider();
     const createGoogleUser = () => {
+        setLoading(true)
         return signInWithPopup(auth, GoogleProvider)
     }
     const twitterProvider = new TwitterAuthProvider();
     const createTwitterUser = () => {
+        setLoading(true)
         return signInWithPopup(auth, twitterProvider)
     }
 
     const facebookProvider = new FacebookAuthProvider();
     const createFacebookUser = () => {
+        setLoading(true)
         return signInWithPopup(auth, facebookProvider)
     }
 
     const githubProvider = new GithubAuthProvider();
     const createGithubUser = () => {
+        setLoading(true)
         return signInWithPopup(auth, githubProvider)
     }
 

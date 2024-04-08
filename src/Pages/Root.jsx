@@ -4,10 +4,10 @@ import Footer from "../Shared/Footer";
 const Root = () => {
     return (
         <div >
-            <div className="container mt-6 mx-auto">
+            <div className="container mx-auto">
                 <Navber></Navber>
             </div>
-            <div className="container mx-auto">
+            <div className="container min-h-[calc(100vh-136px)] mx-auto">
                 <Outlet />
             </div>
             <div >

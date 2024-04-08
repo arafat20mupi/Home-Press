@@ -10,12 +10,8 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <div className="mt-10 space-y-5">
-                <div>
-                    <div>
-                        <h1 className="text-5xl text-black font-extrabold ">Find Your Dream House </h1>
-                        <h1 className="text-5xl text-black font-extrabold mt-3">Search By Area</h1>
-                    </div>
-                </div>
+                <h1 className="text-3xl font-bold leading-none sm:text-4xl flex justify-center my-10"> Select House
+                </h1>
                 <div className="grid  grid-cols-1 md:grid-cols-3 gap-8 shadow-lg">
                     {
                         homes.map(home => <HomeCard kew={home.id} home={home}></HomeCard>)

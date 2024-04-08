@@ -25,7 +25,6 @@ const Login = () => {
                 console.error(error)
             })
     }
-console.log(location);
     const handleGoogle = () => {
         createGoogleUser()
             .then(() => {
@@ -70,7 +69,7 @@ console.log(location);
                     </div>
                     <button type="submit" className="block w-full p-3 text-center rounded-sm dark:text-gray-50 dark:bg-violet-600">Sign in</button>
                 </form>
-                <p className="text-xs text-center sm:px-6 dark:text-gray-600">Do not have an account?
+                <p className="text-xs text-center mt-6 sm:px-6 dark:text-gray-600">Do not have an account?
                     <Link to="/register">
                         <button className="ml-3 font-bold text-blue-600">Register</button>
                     </Link>

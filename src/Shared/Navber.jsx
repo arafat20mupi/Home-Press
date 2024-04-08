@@ -1,10 +1,10 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
+import UserProfile from "../Pages/UserProfile";
 
 const Navber = () => {
     const { user, signOutUser } = useContext(AuthContext)
-
     const HandleSignOut = () => {
         signOutUser()
             .then((result) => {
@@ -15,16 +15,16 @@ const Navber = () => {
             });
     }
 
-    const Navlinks =<>
+    const Navlinks = <>
         <li><NavLink to={'/'}>Home</NavLink> </li>
-        <li><NavLink to={'/userProfile'}>UserProfile</NavLink> </li>
         {
             user && <li><NavLink to={'/updateProfile'}>UpdateProfile</NavLink> </li>
         }
         <li><NavLink to={'/about'}>About</NavLink> </li>
+
     </>
     return (
-        <div className="navbar relative bg-base-100">
+        <from className="navbar relative bg-base-100">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -43,16 +43,19 @@ const Navber = () => {
                     {Navlinks}
                 </ul>
             </div>
-            <div className="navbar-end ">
+            <div className="navbar-end space-x-3">
+                {
+                    user && <UserProfile></UserProfile>
+                }
                 {
                     user ?
-                        <button onClick={HandleSignOut} className="btn">Log Out</button> :
-                        <Link to="/login">
-                            <button className="btn">Login</button>
+                        <button onClick={HandleSignOut} className="btn btn-warning text-lg font-bold">Log Out</button> :
+                        <Link to="/login" >
+                            <button type="submit" className="btn btn-warning text-lg font-bold">Login</button>
                         </Link>
                 }
             </div>
-        </div>
+        </from>
     );
 };
 
