@@ -35,7 +35,7 @@ const Register = () => {
                 <h1 className="text-2xl font-bold text-center">Register</h1>
                 <form onSubmit={handleRigister} className="space-y-6">
                     <div className="space-y-1 text-sm">
-                        <label htmlFor="username" className="block text-xl font-semibold dark:text-gray-600"> your Name</label>
+                        <label htmlFor="username" className="block text-xl font-semibold dark:text-gray-600"> Your Name</label>
                         <input type="text" name="name" placeholder="Enter your Name" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" required />
                     </div>
                     <div className="space-y-1 text-sm">

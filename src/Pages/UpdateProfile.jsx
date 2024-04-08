@@ -2,7 +2,7 @@ import 'animate.css';
 import { Link } from 'react-router-dom';
 const UpdateProfile = () => {
     return (
-        <div className="w-full  max-w-md p-8 space-y-3 rounded-xl border   bg-white   font-sans mx-auto">
+        <div className="w-full  max-w-md p-8 space-y-3 rounded-xl border animate__animated animate__bounceInUp bg-white   font-sans mx-auto">
             <h1 className="text-3xl font-bold text-center text-indigo-600">Update Profile</h1>
             {/* Input fields and the form started */}
             <form action="" className="space-y-6">
@@ -14,9 +14,9 @@ const UpdateProfile = () => {
                 </div>
                 <div className="space-y-2 text-sm">
                     <label htmlFor="password" className="block ">
-                        Password
+                        Photo URL
                     </label>
-                    <input type="password" name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md border border-indigo-300 focus:outline-none focus:ring  " />
+                    <input type="text" name="photo" id="password" placeholder="PhotoURL" className="w-full px-4 py-3 rounded-md border border-indigo-300 focus:outline-none focus:ring  " />
                     <div className="flex justify-end text-xs ">
                         <a href="#" className="hover:underline">
                             Forgot Password?
