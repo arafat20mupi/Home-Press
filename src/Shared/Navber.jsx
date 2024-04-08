@@ -21,11 +21,13 @@ const Navber = () => {
         {
             user && <li><NavLink to={'/updateProfile'}>UpdateProfile</NavLink> </li>
         }
+        {
+           user && <li><NavLink to={'/proparty'}>Proparty</NavLink> </li>
+        }
         <li><NavLink to={'/about'}>About</NavLink> </li>
-
     </>
     return (
-        <from className="navbar relative bg-base-100">
+        <from className="navbar rounded-lg bg-base-200">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -38,8 +40,8 @@ const Navber = () => {
                     </ul>
                 </div>
                 <div className="flex justify-center items-center">
-                    <FcHome className="text-4xl"/>
-                    <a className="btn btn-ghost font-bold text-2xl">Urban</a>
+                    <FcHome className="text-4xl" />
+                    <a className="btn btn-ghost font-bold text-2xl">HomePress</a>
                 </div>
 
             </div>

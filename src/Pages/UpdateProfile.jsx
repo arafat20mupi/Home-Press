@@ -1,8 +1,20 @@
 import 'animate.css';
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../Provider/AuthProvider';
+import { Helmet } from 'react-helmet-async';
+
 const UpdateProfile = () => {
+    const { user } = useContext(AuthContext);
+    console.log(user);
     return (
+
         <div className=' mx-auto  my-auto flex  items-center justify-center'>
+            <Helmet>
+                <title>
+                    HomePress-UpdateProfile
+                </title>
+            </Helmet>
             <div className="w-96 h-full p-8 space-y-3 rounded-xl border animate__animated animate__bounceInUp bg-white   font-sans ">
                 <h1 className="text-3xl font-bold text-center text-indigo-600">Update Profile</h1>
                 {/* Input fields and the form started */}

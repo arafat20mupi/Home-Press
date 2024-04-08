@@ -1,4 +1,5 @@
 
+import { Helmet } from "react-helmet-async";
 import { useParams, useLoaderData } from "react-router-dom"
 const HomeCardDetails = () => {
 
@@ -9,6 +10,11 @@ const HomeCardDetails = () => {
     const { image, estate_title, description, price, status, area, location, facilities } = home
     return (
         <section className="">
+            <Helmet>
+                <title>
+                    HomePress.HomeDetails
+                </title>
+            </Helmet>
             <div className="container flex flex-col justify-center p-6 mx-auto  lg:flex-row lg:justify-between">
                 <div className="flex flex-col justify-center items-center  w-full ">
                     <img src={image} alt="" className=" flex  h-96 w-full md:px-20 rounded-lg justify-center items-center" />
@@ -43,7 +49,7 @@ const HomeCardDetails = () => {
                             Location: <span className="text-red-500 ml-2 ">{location.split(",")[0]}</span>
                         </p>
                         <p className="mt-6 text-start text-xl font-bold ">
-                        Area: <span className="text-red-500 ml-2 ">{area}</span>
+                            Area: <span className="text-red-500 ml-2 ">{area}</span>
                         </p>
 
                     </div>
