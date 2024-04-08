@@ -1,13 +1,14 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { GoArrowRight } from "react-icons/go";
 import { toast } from 'react-toastify';
 import { Helmet } from "react-helmet-async";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 const Register = () => {
-    const { createUser, } = useContext(AuthContext)
-    const location = useLocation();
+    const { createUser, } = useContext(AuthContext);
+    const [showPassword ,setShowPassword ] = useState(false)
     const navigate = useNavigate();
     const handleRigister = e => {
         e.preventDefault();
@@ -58,7 +59,6 @@ const Register = () => {
             }
             )
     }
-    console.log(location);
     return (
         <div>
             <Helmet>
@@ -81,9 +81,16 @@ const Register = () => {
                         <label htmlFor="username" className="block text-xl font-semibold dark:text-gray-600"> Email</label>
                         <input type="email" name="email" placeholder="Enter your Email" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" required />
                     </div>
-                    <div className="space-y-1 text-sm">
+                    <div className="space-y-1 relative text-sm">
                         <label htmlFor="password" className="block text-xl font-semibold dark:text-gray-600"> Password</label>
-                        <input type="password" name="password" id="password" placeholder="Enter your Password" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" required />
+                        <input 
+                        type={showPassword ? "text" : "password"} 
+                        name="password" id="password" placeholder="Enter your Password" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" required />
+                        <div onClick={() => setShowPassword(!showPassword)} className="absolute text-2xl text-gray-600 top-9 right-2">
+                            {
+                                showPassword ? <FaEyeSlash/>: <FaEye/>
+                            }
+                        </div>
                     </div>
                     <button type="submit" className="block w-full p-3 text-center rounded-sm dark:text-gray-50 dark:bg-violet-600">Register</button>
                 </form>
