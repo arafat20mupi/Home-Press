@@ -4,7 +4,9 @@ This is the repository for my awesome website.
 
 
 ## 🔗 Links
-Live Link : https://homepress_firebase.surge.sh/
+Firebase host Live Link : https://assainment-9-6788e.web.app
+
+Surge host Live Link : https://homepress_firebase.surge.sh/
 
 
 ## Features
