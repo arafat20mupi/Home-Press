@@ -29,7 +29,7 @@ const Login = () => {
                 navigate(location?.state ? location.state : "/")
             })
             .catch(() => {
-                toast.error("Please register Account", {
+                toast.error("Login Unsuccesful, please register  ", {
                     position: "top-center",
                     autoClose: 1000
                 });
@@ -45,7 +45,7 @@ const Login = () => {
                 navigate(location?.state ? location.state : "/")
             })
             .catch(() => {
-                toast.error("Please register Account", {
+                toast.error("Login Unsuccesful", {
                     position: "top-center",
                     autoClose: 1000
                 });
@@ -62,7 +62,7 @@ const Login = () => {
                 navigate(location?.state ? location.state : "/")
             })
             .catch(() => {
-                toast.error("Please register Account", {
+                toast.error("Login Unsuccesful", {
                     position: "top-center",
                     autoClose: 1000
                 });
@@ -87,25 +87,23 @@ const Login = () => {
                 <div className="space-y-1 text-sm">
                     <label htmlFor="password" className="block text-xl font-semibold dark:text-gray-600"> Password</label>
                     <input type="password" name="password" id="password" placeholder="Enter your Password" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
-                    <div className="flex justify-end text-xs dark:text-gray-600">
-                        <a rel="noopener noreferrer" href="#">Forgot Password?</a>
-                    </div>
+                    
                 </div>
                 <button type="submit" className="block w-full p-3 text-center rounded-sm dark:text-gray-50 dark:bg-violet-600">Sign in</button>
             </form>
 
             <h2 className="flex my-3 justify-center text-lg">
-                Or Sign up using
+                -----Or Sign up using-----
             </h2>
-            <div className="flex space-x-4  justify-center">
+            <div className="flex space-x-6 justify-center">
 
                 <button
                     onClick={handleGoogle}
-                    className="text-2xl"><FaGoogle />
+                    className="text-xl"><FaGoogle />
                 </button>
                 <button
                     onClick={handlegithub}
-                    className="text-2xl"><FaGithub />
+                    className="text-xl"><FaGithub />
                 </button>
             </div>
             <p className="  flex text-lg mt-6 sm:px-6 dark:text-gray-600">Do not have an account?
