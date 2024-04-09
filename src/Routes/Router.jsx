@@ -32,7 +32,7 @@ const router = createBrowserRouter([
             {
                 path: '/updateProfile',
                 errorElement: <ErrorPage />,
-                element: <UpdateProfile></UpdateProfile>
+                element: <PrivateRouter><UpdateProfile></UpdateProfile></PrivateRouter>
             },
             {
                 path: '/about',

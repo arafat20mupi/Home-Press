@@ -21,7 +21,7 @@ const Navber = () => {
             user && <li><NavLink to={'/updateProfile'}>UpdateProfile</NavLink> </li>
         }
         {
-            user && <li><NavLink to={'privateUserProfile'}>UserProfile</NavLink> </li>
+            user && <li><NavLink to={'/privateUserProfile'}>UserProfile</NavLink> </li>
         }
         {
             user && <li><NavLink to={'/proparty'}>Proparty</NavLink> </li>
