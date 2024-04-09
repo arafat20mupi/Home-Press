@@ -10,55 +10,60 @@ import PrivateRouter from "./PrivateRouter";
 import UserProfile from "../Pages/UserProfile";
 import ErrorPage from "../Shared/ErrorPage";
 import Proparty from "./Proparty";
+import PrivateUserProfile from "./PrivateUserProfile";
 
 const router = createBrowserRouter([
     {
-        path:'/',
+        path: '/',
         errorElement: <ErrorPage />,
         element: <Root></Root>,
-        children:[
+        children: [
             {
-                path:'/',
+                path: '/',
                 errorElement: <ErrorPage />,
-                element:<Home></Home>,
+                element: <Home></Home>,
                 loader: () => fetch('/residential.json')
             },
             {
-                path:'/userProfile',
+                path: '/userProfile',
                 errorElement: <ErrorPage />,
                 element: <PrivateRouter><UserProfile></UserProfile> </PrivateRouter>
             },
             {
-                path:'/updateProfile',
+                path: '/updateProfile',
                 errorElement: <ErrorPage />,
-                element:<UpdateProfile></UpdateProfile>
+                element: <UpdateProfile></UpdateProfile>
             },
             {
-                path:'/about',
+                path: '/about',
                 errorElement: <ErrorPage />,
-                element:<About></About>
+                element: <About></About>
             },
             {
-                path:'/login',
+                path: '/login',
                 errorElement: <ErrorPage />,
-                element:<Login></Login>
+                element: <Login></Login>
             },
             {
-                path:'/register',
+                path: '/register',
                 errorElement: <ErrorPage />,
-                element:<Register></Register>
+                element: <Register></Register>
             },
             {
                 path: '/home/:id',
                 errorElement: <ErrorPage />,
                 element: <PrivateRouter><HomeCardDetails></HomeCardDetails></PrivateRouter>,
-                loader:  () => fetch('/residential.json')
+                loader: () => fetch('/residential.json')
             },
             {
-                path:'/proparty',
+                path: '/proparty',
                 element: <PrivateRouter><Proparty></Proparty> </PrivateRouter>,
-                loader: ()=> fetch('/proparty.json')
+                loader: () => fetch('/proparty.json')
             },
+            {
+                path: 'privateUserProfile',
+                element: <PrivateRouter> <PrivateUserProfile></PrivateUserProfile> </PrivateRouter>
+            }
         ]
     }
 ])

@@ -6,6 +6,8 @@ import { GoArrowRight } from "react-icons/go";
 import { toast } from 'react-toastify';
 import { Helmet } from "react-helmet-async";
 
+
+
 const Login = () => {
     const { signInUser, createGoogleUser, createGithubUser } = useContext(AuthContext);
 
@@ -13,7 +15,6 @@ const Login = () => {
     const navigate = useNavigate();
 
     const handleLogin = e => {
-
         e.preventDefault();
         const from = new FormData(e.target)
         const email = from.get('email')
@@ -73,7 +74,9 @@ const Login = () => {
             })
     }
 
+    
     return (
+
         <div className="w-full mx-auto  max-w-md p-8  rounded-xl dark:bg-gray-50 dark:text-gray-800 ">
             <Helmet>
                 <title>

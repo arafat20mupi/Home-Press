@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
-
 const About = () => {
+    
+    
     return (
         <div>
             <Helmet>
@@ -8,7 +9,6 @@ const About = () => {
                     HomePress-About
                 </title>
             </Helmet>
-
             <section className="p-6 rounded-lg dark:bg-gray-100 dark:text-gray-800">
                 <div className="container p-4 mx-auto text-center">
                     <h2 className="text-4xl font-bold">Trusted by the industry leaders</h2>
