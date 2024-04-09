@@ -1,14 +1,31 @@
-import { Helmet } from "react-helmet-async";
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import 'leaflet/dist/leaflet.css';
+import { Helmet } from 'react-helmet-async';
 const About = () => {
-    
-    
+    const position = [25.6278, 88.6376];
+
     return (
-        <div>
+        <div >
             <Helmet>
                 <title>
                     HomePress-About
                 </title>
             </Helmet>
+            <div className='mb-6'>
+                <h2 className='flex text-center w-full text-4xl font-bold justify-center my-4'>See My Location</h2>
+                <MapContainer className='rounded-2xl' center={position} zoom={13} scrollWheelZoom={false} style={{ height: '400px', width: '100%' }}>
+                    <TileLayer
+                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                    />
+                    <Marker position={position}>
+                        <Popup>
+                            A pretty CSS3 popup. <br /> Easily customizable.
+                        </Popup>
+                    </Marker>
+                </MapContainer>
+            </div>
+
             <section className="p-6 rounded-lg dark:bg-gray-100 dark:text-gray-800">
                 <div className="container p-4 mx-auto text-center">
                     <h2 className="text-4xl font-bold">Trusted by the industry leaders</h2>

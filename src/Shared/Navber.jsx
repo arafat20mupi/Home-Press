@@ -9,7 +9,7 @@ const Navber = () => {
     const { user, signOutUser } = useContext(AuthContext)
     const HandleSignOut = () => {
         signOutUser()
-        toast.success("Login Succesfully", {
+        toast.success("Logout Succesfully", {
             position: "top-center",
             autoClose: 1000
         });

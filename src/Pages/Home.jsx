@@ -3,7 +3,6 @@ import { Helmet } from "react-helmet-async";
 import Banner from "../Layouts/Banner";
 import HomeCard from "../Layouts/HomeCard";
 import { useLoaderData } from "react-router-dom"
-import About from "./About";
 
 const Home = () => {
     const homes = useLoaderData();

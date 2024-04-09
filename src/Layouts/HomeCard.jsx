@@ -4,7 +4,11 @@ import { Link } from "react-router-dom";
 const HomeCard = ({ home }) => {
     const { id, image, location, estate_title } = home;
     return (
-        <div className="w-full  rounded-md shadow-md dark:bg-gray-50 dark:text-gray-800">
+        <div data-aos="fade-up"
+        data-aos-delay="200"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+         className="w-full  rounded-md shadow-md dark:bg-gray-50 dark:text-gray-800">
             <img src={image} alt="" className="object-cover object-center w-full rounded-t-md h-72 dark:bg-gray-500" />
             <div className="flex flex-col justify-between p-6 space-y-8">
                 <div className="space-y-2">
