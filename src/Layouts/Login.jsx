@@ -19,23 +19,20 @@ const Login = () => {
         const from = new FormData(e.target)
         const email = from.get('email')
         const password = from.get('password')
-        console.log(email, password);
 
         signInUser(email, password)
-            .then(result => {
-                console.log(result);
+            .then(() => {
                 toast.success("Login Succesfully", {
                     position: "top-center",
                     autoClose: 1000
                 });
                 navigate(location?.state ? location.state : "/")
             })
-            .catch(error => {
+            .catch(() => {
                 toast.error("Please register Account", {
                     position: "top-center",
                     autoClose: 1000
                 });
-                console.error(error)
             })
     }
     const handleGoogle = () => {
@@ -47,12 +44,11 @@ const Login = () => {
                 });
                 navigate(location?.state ? location.state : "/")
             })
-            .catch(error => {
+            .catch(() => {
                 toast.error("Please register Account", {
                     position: "top-center",
                     autoClose: 1000
                 });
-                console.error(error)
             })
     }
 
@@ -65,12 +61,11 @@ const Login = () => {
                 });
                 navigate(location?.state ? location.state : "/")
             })
-            .catch(error => {
+            .catch(() => {
                 toast.error("Please register Account", {
                     position: "top-center",
                     autoClose: 1000
                 });
-                console.error(error)
             })
     }
 

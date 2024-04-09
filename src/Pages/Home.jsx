@@ -3,10 +3,11 @@ import { Helmet } from "react-helmet-async";
 import Banner from "../Layouts/Banner";
 import HomeCard from "../Layouts/HomeCard";
 import { useLoaderData } from "react-router-dom"
+import Contacts from "../Layouts/Contacts";
+import Offer from "../Layouts/Offer";
 
 const Home = () => {
     const homes = useLoaderData();
-    console.log(homes);
     return (
         <div>
             <Helmet>
@@ -22,7 +23,8 @@ const Home = () => {
                     }
                 </div>
             </div>
-
+            <Contacts></Contacts>
+            <Offer></Offer>
 
         </div>
     );

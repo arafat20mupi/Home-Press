@@ -13,12 +13,8 @@ const Register = () => {
     const handleRigister = e => {
         e.preventDefault();
         const from = new FormData(e.target)
-
-        const name = from.get('name')
-        const email = from.get('email')
-        const photo = from.get('photo')
-        const password = from.get('password')
-        console.log(name, email, photo, password);
+        const email = from.get('email');
+        const password = from.get('password');
 
         if (password.length < 6) {
             toast.error("Password must be at least 6 characters", {

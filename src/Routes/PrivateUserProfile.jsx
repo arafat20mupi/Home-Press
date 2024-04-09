@@ -5,7 +5,6 @@ import { Helmet } from "react-helmet-async";
 
 const PrivateUserProfile = () => {
     const { user } = useContext(AuthContext);
-    console.log(user);
     return (
         <div>
             <Helmet>

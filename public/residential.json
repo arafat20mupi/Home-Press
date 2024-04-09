@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "estate_title": "Cozy Apartment in Downtown",
+        "estate_title": "Single-Family Home",
         "segment_name": "Residential",
         "description": "A modern and cozy apartment located in the heart of downtown. Close to amenities and public transportation.",
         "price": "$200,000",
@@ -13,7 +13,7 @@
             "kitchen",
             "balcony"
         ],
-        "image": " https://i.ibb.co/g4BDvpk/apartments-s9-740x884.jpg"
+        "image": "https://i.ibb.co/FwxngQX/pexels-binyamin-mellish-186077.jpg"
     },
     {
         "id": 2,
@@ -29,11 +29,11 @@
             "kitchen",
             "backyard"
         ],
-        "image": "https://i.ibb.co/LJN2F56/apartments-s1-740x884.jpg"
+        "image": "https://i.ibb.co/tx1zLdd/pexels-binyamin-mellish-1396132.jpg"
     },
     {
         "id": 3,
-        "estate_title": "Luxury Condo with Ocean View",
+        "estate_title": "Townhouse",
         "segment_name": "Residential",
         "description": "Experience luxury living with breathtaking ocean views from this high-rise condo. Features top-of-the-line amenities.",
         "price": "$500,000",
@@ -45,11 +45,11 @@
             "swimming pool",
             "gym"
         ],
-        "image": "https://i.ibb.co/m5y33vj/apartments-s2-740x884.jpg"
+        "image": "https://i.ibb.co/7vpVhhb/pexels-amaury-michaux-18189675.jpg"
     },
     {
         "id": 4,
-        "estate_title": "Modern Townhouse in Gated Community",
+        "estate_title": "Apartment",
         "segment_name": "Residential",
         "description": "A modern townhouse situated in a secure gated community. Perfect for those seeking privacy and convenience.",
         "price": "$280,000",
@@ -61,11 +61,11 @@
             "kitchen",
             "garden"
         ],
-        "image": "https://i.ibb.co/thsdYPR/apartments-s3-740x884.jpg"
+        "image": "https://i.ibb.co/bJ27Gjr/pexels-jessica-bryant-1370704.jpg"
     },
     {
         "id": 5,
-        "estate_title": "Charming Cottage by the Lake",
+        "estate_title": "Student Housing",
         "segment_name": "Residential",
         "description": "Escape to this charming cottage nestled by the lake. Ideal for a weekend getaway or permanent residence.",
         "price": "$150,000",
@@ -77,11 +77,11 @@
             "fireplace",
             "deck"
         ],
-        "image": "https://i.ibb.co/r5KwdkP/apartments-s4-740x884.jpg"
+        "image": "https://i.ibb.co/RvLbLfX/pexels-vika-glitter-1648768.jpg"
     },
     {
         "id": 6,
-        "estate_title": "Modern Apartment with City Views",
+        "estate_title": "Senior Living Community",
         "segment_name": "Residential",
         "description": "Enjoy stunning city views from this modern apartment. Conveniently located near shopping and dining.",
         "price": "$280,000",
@@ -93,7 +93,7 @@
             "gym",
             "parking"
         ],
-        "image": " https://i.ibb.co/kMTjdjd/apartments-s6-740x884.jpg"
+        "image": "https://i.ibb.co/W0246WM/pexels-pixabay-164558.jpg"
     },
     {
         "id": 7,
@@ -109,11 +109,11 @@
             "kitchen",
             "backyard"
         ],
-        "image": "https://i.ibb.co/4gdptzw/apartments-s5-740x884.jpg"
+        "image": "https://i.ibb.co/VLxCQgP/pexels-bryan-dijkhuizen-18189048.jpg"
     },
     {
         "id": 8,
-        "estate_title": "Elegant Townhouse with Courtyard",
+        "estate_title": "Vacation Rental",
         "segment_name": "Residential",
         "description": "Step into elegance with this townhouse featuring a beautiful courtyard. Ideal for entertaining guests.",
         "price": "$400,000",
@@ -125,7 +125,7 @@
             "kitchen",
             "courtyard"
         ],
-        "image": "https://i.ibb.co/9vrvrHB/apartments-s7-740x884.jpg"
+        "image": "https://i.ibb.co/Kmmjssj/pexels-pixabay-277667.jpg"
     },
     {
         "id": 9,
