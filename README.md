@@ -36,3 +36,4 @@ Surge host Live Link : https://homepress_firebase.surge.sh/
  - [react icons](https://react-icons.github.io/react-icons/)
  - [react leflet](https://react-leaflet.js.org/)
  - [react toastify](https://www.npmjs.com/package/react-toastify)
+ - [react marquee](https://www.npmjs.com/package/react-fast-marquee)

@@ -79,7 +79,6 @@ const UpdateProfile = () => {
                     <div className="space-y-2 text-sm">
                         <button type="submit" className="text-lg rounded-xl relative p-[10px] block w-full bg-indigo-600 text-white border-y-4 duration-500 overflow-hidden focus:border-indigo-500 z-50 group">
                             Update Profile
-                           
                         </button>
                     </div>
                     <NavLink to="/" className="text-lg rounded-xl relative p-[10px] block w-full bg-indigo-600 text-white border-y-4 duration-500 overflow-hidden focus:border-indigo-500 z-50 group">
