@@ -11,7 +11,7 @@ const HomeCard = ({ home }) => {
          className="w-full  rounded-md shadow-md dark:bg-gray-50 dark:text-gray-800">
             <img src={image} alt="" className="object-cover object-center w-full rounded-t-md h-72 dark:bg-gray-500" />
             <div className="flex flex-col justify-between p-6 space-y-8">
-                <div className="space-y-2 h-20">
+                <div className="space-y-2 lg:h-20">
                     <h2 className="text-3xl font-bold tracking-wide"> {estate_title}</h2>
                     <p className=" text-xl  text-black flex items-center  ">Location: {location.split(",")[0]} </p>
                 </div>

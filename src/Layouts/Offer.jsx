@@ -3,7 +3,7 @@ const Offer = () => {
     return (
         <div>
             <div 
-            data-aos="fade-up-left"
+            data-aos="fade-up"
             data-aos-delay="200"
             data-aos-duration="1000"
             data-aos-easing="ease-in-out"

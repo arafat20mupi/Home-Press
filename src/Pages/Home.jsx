@@ -15,7 +15,7 @@ const Home = () => {
                 <title> HomePress-Home </title>
             </Helmet>
             <Banner></Banner>
-            <div className="mt-10 space-y-5">
+            <div className="lg:mt-10 lg:space-y-5">
                 <Marquee speed={300}>
                     <h1 className="text-3xl font-bold leading-none sm:text-4xl flex justify-center my-5"> Select Your House
                     </h1>
