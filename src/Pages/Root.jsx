@@ -14,7 +14,7 @@ const Root = () => {
             <Helmet>
                 <title>HomePress</title>
             </Helmet>
-            <div className="container md:mb-6 mx-auto">
+            <div className="container lg:mb-6 mx-auto">
                 <Navber></Navber>
             </div>
             <div className="container min-h-[calc(100vh-200px)] mb-12 mx-auto">

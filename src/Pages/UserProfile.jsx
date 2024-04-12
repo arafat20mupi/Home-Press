@@ -9,7 +9,7 @@ const UserProfile = () => {
             
             <div className="tooltip tooltip-bottom" data-tip={user?.displayName ? user.displayName : "Arafat islam"}>
                 {
-                    user.photoURL && <img className="w-12  h-12 rounded-full" src={user?.photoURL} alt="" /> 
+                    user.photoURL && <img className="w-12 h-12 rounded-full" src={user?.photoURL} alt="" /> 
                 }
             </div>
 

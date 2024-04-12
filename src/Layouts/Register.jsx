@@ -7,8 +7,12 @@ import { toast } from 'react-toastify';
 import { Helmet } from "react-helmet-async";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 const Register = () => {
-    const { createUser, } = useContext(AuthContext);
+    const { createUser,updateUser,setUser } = useContext(AuthContext);
+
     const [showPassword ,setShowPassword ] = useState(false)
+    const [updateName, setUpdateName] = useState('');
+    const [updatePhotoURL, setUpdatePhotoURL] = useState('');
+    const [updateEmail, setUpdateEmail] = useState('');
     const navigate = useNavigate();
     const handleRigister = e => {
         e.preventDefault();
@@ -40,6 +44,16 @@ const Register = () => {
 
         createUser(email, password)
             .then(() => {
+                updateUser({
+                    displayName: updateName,
+                    photoURL: updatePhotoURL,
+                    email: updateEmail
+                })
+                setUser({
+                    displayName: updateName,
+                    photoURL: updatePhotoURL,
+                    email: updateEmail,
+                })
                 toast.success("Register Succesfully", {
                     position: "top-center",
                     autoClose: 1000
@@ -62,35 +76,35 @@ const Register = () => {
                     HomePress-Register
                 </title>
             </Helmet>
-            <div className="w-full mx-auto mt-6 max-w-md p-8 space-y-3 rounded-xl dark:bg-gray-50 dark:text-gray-800 ">
+            <div className="w-full mx-auto mt-6 max-w-md p-8 space-y-3 rounded-xl bg-gray-50 text-gray-800 ">
                 <h1 className="text-2xl font-bold text-center">Register</h1>
                 <form onSubmit={handleRigister} className="space-y-6">
                     <div className="space-y-1 text-sm">
-                        <label htmlFor="username" className="block text-xl font-semibold dark:text-gray-600"> Your Name</label>
-                        <input type="text" name="name" placeholder="Enter your Name" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" required />
+                        <label htmlFor="username" className="block text-xl font-semibold text-gray-600"> Your Name</label>
+                        <input onChange={(e) => setUpdateName(e.target.value)} type="text" name="name" placeholder="Enter your Name" className="w-full px-4 py-3 rounded-md border-gray-300 bg-gray-50 text-gray-800 focus:border-violet-600" required />
                     </div>
                     <div className="space-y-1 text-sm">
-                        <label htmlFor="username" className="block text-xl font-semibold dark:text-gray-600"> Photo URL</label>
-                        <input type="text" name="photo" placeholder="Enter your Email" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" required />
+                        <label htmlFor="username" className="block text-xl font-semibold text-gray-600"> Photo URL</label>
+                        <input onChange={(e) => setUpdatePhotoURL(e.target.value)}  type="text" name="photo" placeholder="Enter your Email" className="w-full px-4 py-3 rounded-md border-gray-300 bg-gray-50 text-gray-800 focus:border-violet-600" required />
                     </div>
                     <div className="space-y-1 text-sm">
-                        <label htmlFor="username" className="block text-xl font-semibold dark:text-gray-600"> Email</label>
-                        <input type="email" name="email" placeholder="Enter your Email" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" required />
+                        <label htmlFor="username" className="block text-xl font-semibold text-gray-600"> Email</label>
+                        <input onChange={(e) => setUpdateEmail(e.target.value)} type="email" name="email" placeholder="Enter your Email" className="w-full px-4 py-3 rounded-md border-gray-300 bg-gray-50 text-gray-800 focus:border-violet-600" required />
                     </div>
                     <div className="space-y-1 relative text-sm">
-                        <label htmlFor="password" className="block text-xl font-semibold dark:text-gray-600"> Password</label>
+                        <label htmlFor="password" className="block text-xl font-semibold text-gray-600"> Password</label>
                         <input 
                         type={showPassword ? "text" : "password"} 
-                        name="password" id="password" placeholder="Enter your Password" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" required />
+                        name="password" id="password" placeholder="Enter your Password" className="w-full px-4 py-3 rounded-md border-gray-300 bg-gray-50 text-gray-800 focus:border-violet-600" required />
                         <div onClick={() => setShowPassword(!showPassword)} className="absolute text-2xl text-gray-600 top-9 right-2">
                             {
                                 showPassword ? <FaEyeSlash/>: <FaEye/>
                             }
                         </div>
                     </div>
-                    <button type="submit" className="block w-full p-3 text-center rounded-sm dark:text-gray-50 dark:bg-violet-600">Register</button>
+                    <button type="submit" className="block w-full p-3 text-center rounded-sm text-gray-50 bg-violet-600">Register</button>
                 </form>
-                <p className="text-lg flex text-center sm:px-6 dark:text-gray-600">Already have an account?
+                <p className="text-lg flex text-center lg:px-6 text-gray-600">Already have an account?
                     <Link to="/login">
                         <button className="ml-4  font-bold  text-blue-600 items-center justify-center
                          flex">Login <GoArrowRight />  </button>

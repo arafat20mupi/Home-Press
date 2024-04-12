@@ -7,7 +7,7 @@ import { Helmet } from 'react-helmet-async';
 import { toast } from 'react-toastify';
 
 const UpdateProfile = () => {
-    const { updateUser, user, setLoading } = useContext(AuthContext);
+    const { updateUser, user ,setUser} = useContext(AuthContext);
     const [updateName, setUpdateName] = useState('');
     const [updatePhotoURL, setUpdatePhotoURL] = useState('');
 
@@ -24,8 +24,15 @@ const UpdateProfile = () => {
             uid: user?.uid,
             displayName: updateName,
             photoURL: updatePhotoURL,
+            email: user?.email
         })
+        
             .then(() => {
+                setUser({
+                    displayName: updateName,
+                    photoURL: updatePhotoURL,
+                    email: user?.email
+                })
                 toast.success("Profile Updated Successfully", {
                     position: "top-center",
                     autoClose: 1000
@@ -37,9 +44,6 @@ const UpdateProfile = () => {
                     autoClose: 1000
                 });
             })
-            .finally(() => {
-                setLoading(false);
-            });
     };
 
     return (
