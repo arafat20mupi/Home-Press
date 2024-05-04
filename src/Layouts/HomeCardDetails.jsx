@@ -23,26 +23,35 @@ const HomeCardDetails = () => {
                         data-aos-easing="ease-in-out"
                         src={image} alt="" className=" flex  h-96 w-full md:px-20 rounded-lg justify-center items-center" />
                     <div className='flex space-x-3 items-start lg:space-x-10'>
-                        <p className="mt-6 text-start text-xl font-bold ">
+                        <p
+                            data-aos="fade-left"
+                            data-aos-delay="200"
+                            data-aos-duration="200"
+                            data-aos-easing="ease-in-out"
+                            className="mt-6 text-start text-xl font-bold ">
                             Price: <span className="text-red-500 ml-2 ">{price}</span>
                         </p>
-                        <p className="mt-6 text-start text-xl font-bold ">
+                        <p data-aos="fade-right"
+                            data-aos-delay="200"
+                            data-aos-duration="200"
+                            data-aos-easing="ease-in-out"
+                            className="mt-6 text-start text-xl font-bold ">
                             Status: <span className="text-red-500 ml-2 ">{status}</span>
                         </p>
                     </div>
                 </div>
-                <div  className="flex flex-col lg:justify-center p-6  rounded-sm lg:max-w-md xl:max-w-lg ">
+                <div className="flex flex-col lg:justify-center p-6  rounded-sm lg:max-w-md xl:max-w-lg ">
                     <h1 data-aos="fade-left"
                         data-aos-delay="200"
                         data-aos-duration="200"
                         data-aos-easing="ease-in-out"
-                         className="text-3xl font-bold leading-none sm:text-4xl">{estate_title}
+                        className="text-3xl font-bold leading-none sm:text-4xl">{estate_title}
                     </h1>
                     <p data-aos="fade-left"
                         data-aos-delay="200"
                         data-aos-duration="300"
                         data-aos-easing="ease-in-out"
-                         className="mt-6 mb-6 text-lg ">
+                        className="mt-6 mb-6 text-lg ">
                         {description}
                     </p>
                     <p data-aos="fade-left"
@@ -62,17 +71,17 @@ const HomeCardDetails = () => {
                             </li>)
                         }
                     </div>
-                    <div  className='lg:flex justify-between  '>
+                    <div className='lg:flex justify-between  '>
                         <p data-aos="fade-right"
-                        data-aos-delay="200"
-                        data-aos-duration="600"
-                        data-aos-easing="ease-in-out" className="mt-6 text-start text-xl font-bold ">
+                            data-aos-delay="200"
+                            data-aos-duration="600"
+                            data-aos-easing="ease-in-out" className="mt-6 text-start text-xl font-bold ">
                             Location: <span className="text-red-500 ml-2 ">{location.split(",")[0]}</span>
                         </p>
                         <p data-aos="fade-left"
-                        data-aos-delay="200"
-                        data-aos-duration="600"
-                        data-aos-easing="ease-in-out" className="mt-6 text-start text-xl font-bold ">
+                            data-aos-delay="200"
+                            data-aos-duration="600"
+                            data-aos-easing="ease-in-out" className="mt-6 text-start text-xl font-bold ">
                             Area: <span className="text-red-500 ml-2 ">{area}</span>
                         </p>
 
